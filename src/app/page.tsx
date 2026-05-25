@@ -1,3 +1,5 @@
+import ConnectWalletButton from "./connect-wallet-button";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-white dark:bg-black text-zinc-900 dark:text-zinc-100">
@@ -8,8 +10,11 @@ export default function Home() {
           </span>
           <span>PingChain</span>
         </div>
-        <div className="text-xs px-2 py-1 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400">
-          Arc testnet
+        <div className="flex items-center gap-3">
+          <div className="text-xs px-2 py-1 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400">
+            Arc testnet
+          </div>
+          <ConnectWalletButton />
         </div>
       </header>
 
@@ -25,14 +30,8 @@ export default function Home() {
           five apps.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-3">
-          <button
-            type="button"
-            disabled
-            className="h-12 px-6 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium text-sm tracking-tight disabled:opacity-50 disabled:cursor-not-allowed transition"
-          >
-            Connect Wallet
-          </button>
+        <div className="mt-10 flex flex-col sm:flex-row items-center gap-3">
+          <ConnectWalletButton />
           <button
             type="button"
             disabled
@@ -43,7 +42,7 @@ export default function Home() {
         </div>
 
         <p className="mt-6 text-xs text-zinc-500 dark:text-zinc-500">
-          Setup flow coming in the next build step.
+          Connect a wallet on Arc testnet to begin. Telegram linking lands next.
         </p>
       </section>
 
