@@ -47,8 +47,28 @@ create table if not exists public.telegram_link_codes (
 
 create index if not exists telegram_link_codes_user_idx on public.telegram_link_codes (user_id);
 
+-- Indexer cursor: last block scanned, one row per stream (native_transfers, erc20_approvals).
+create table if not exists public.indexer_state (
+  stream      text primary key,
+  last_block  bigint not null,
+  updated_at  timestamptz not null default now()
+);
+
+-- Idempotency for fired alerts. (tx_hash, log_index, rule_type) is the natural key.
+-- log_index is -1 for native USDC transfers (no log), positive for ERC-20 events.
+create table if not exists public.processed_events (
+  tx_hash     text not null,
+  log_index   integer not null,
+  rule_type   text not null,
+  wallet_id   uuid not null references public.wallets(id) on delete cascade,
+  fired_at    timestamptz not null default now(),
+  primary key (tx_hash, log_index, rule_type, wallet_id)
+);
+
 -- Row-level security: deny anon access by default. Server uses service_role (bypasses RLS).
-alter table public.users            enable row level security;
-alter table public.wallets          enable row level security;
-alter table public.alert_rules      enable row level security;
+alter table public.users               enable row level security;
+alter table public.wallets             enable row level security;
+alter table public.alert_rules         enable row level security;
 alter table public.telegram_link_codes enable row level security;
+alter table public.indexer_state       enable row level security;
+alter table public.processed_events    enable row level security;
