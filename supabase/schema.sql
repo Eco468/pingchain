@@ -1,4 +1,4 @@
--- PingChain MVP schema
+-- Trailhead MVP schema
 -- Run this in Supabase SQL Editor (Project → SQL Editor → New query → paste → Run)
 
 create extension if not exists "pgcrypto";

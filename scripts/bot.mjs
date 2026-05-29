@@ -28,7 +28,7 @@ bot.command("start", async (ctx) => {
   const code = ctx.match?.trim();
   if (!code) {
     await ctx.reply(
-      "Welcome to PingChain. To link your wallet, open the app and click \"Link Telegram\".",
+      "Welcome to Trailhead. To link your wallet, open the app and click \"Link Telegram\".",
     );
     return;
   }
@@ -90,5 +90,5 @@ bot.catch((err) => {
   console.error("bot error:", err);
 });
 
-console.log("PingChain bot polling. Press Ctrl+C to stop.");
+console.log("Trailhead bot polling. Press Ctrl+C to stop.");
 await bot.start();

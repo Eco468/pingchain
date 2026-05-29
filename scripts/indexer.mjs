@@ -264,7 +264,7 @@ async function tick() {
   }
 }
 
-console.log(`PingChain indexer starting on Arc testnet (chainId=${CHAIN_ID}).`);
+console.log(`Trailhead indexer starting on Arc testnet (chainId=${CHAIN_ID}).`);
 
 while (true) {
   try {

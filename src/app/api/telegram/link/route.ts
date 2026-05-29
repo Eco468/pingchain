@@ -61,6 +61,6 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: insertCode.error.message }, { status: 500 });
   }
 
-  const bot = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME ?? "PingChainBot";
+  const bot = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME ?? "TrailheadAlertsBot";
   return Response.json({ url: `https://t.me/${bot}?start=${code}` });
 }

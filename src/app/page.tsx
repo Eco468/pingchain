@@ -10,7 +10,7 @@ export default function Home() {
           <span aria-hidden className="text-blue-600 dark:text-blue-400">
             ◆
           </span>
-          <span>PingChain</span>
+          <span>Trailhead</span>
         </div>
         <div className="flex items-center gap-3">
           <div className="text-xs px-2 py-1 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400">
@@ -70,7 +70,7 @@ export default function Home() {
       <footer className="px-6 py-8 border-t border-zinc-200 dark:border-zinc-900 text-xs text-zinc-500 dark:text-zinc-500 text-center">
         Built on Arc — Circle&apos;s stablecoin L1 ·{" "}
         <a
-          href="https://github.com/Eco468/pingchain"
+          href="https://github.com/Eco468/trailhead"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-zinc-900 dark:hover:text-zinc-200"

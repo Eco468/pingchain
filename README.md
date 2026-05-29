@@ -6,7 +6,7 @@ Built on **[Arc](https://arc.io)**, Circle's stablecoin-native L1.
 
 ## Why
 
-Active crypto users juggle 4–6 apps just to know if anything happened on their wallets today. Existing notification tools are either dev-only (Push), abandoned (Hal), or basic (Etherscan watchlists). PingChain is the consumer-grade alternative.
+Active crypto users juggle 4–6 apps just to know if anything happened on their wallets today. Existing notification tools are either dev-only (Push), abandoned (Hal), or basic (Etherscan watchlists). Trailhead is the consumer-grade alternative.
 
 ## MVP scope
 

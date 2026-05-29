@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PingChain — onchain alerts that actually work",
+  title: "Trailhead — onchain alerts that actually work",
   description:
     "Get a Telegram ping the moment something happens on your wallet. Built on Arc, Circle's stablecoin L1.",
 };
